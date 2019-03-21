@@ -1,0 +1,10 @@
+span {
+  color: blue;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+span.active {
+  color: black;
+  cursor: initial;
+}
