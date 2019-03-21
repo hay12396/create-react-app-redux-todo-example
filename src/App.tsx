@@ -27,6 +27,7 @@ class App extends Component<IAppProps, {}> {
   constructor(props: IAppProps) {
     super(props);
 
+    this.loadFromServer = this.loadFromServer.bind(this);
     this.filterClicked = this.filterClicked.bind(this);
     this.toggleTodo = this.toggleTodo.bind(this);
     this.addTodo = this.addTodo.bind(this);
@@ -44,9 +45,14 @@ class App extends Component<IAppProps, {}> {
     this.props.filterActions!.filter(filter);
   }
 
+  loadFromServer() {
+    this.props.todosActions!.loadTodosFromServer();
+  }
+
   render() {
     return (
       <div>
+        <button onClick={this.loadFromServer}>Load from server</button>
         <TodoForm addTodo={this.addTodo} />
         <TodoList
           todos={this.props.todos || []}

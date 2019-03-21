@@ -21,9 +21,8 @@ export function todosLoadedSuccessfully(todos: TodoItem[]): Action {
 }
 
 export function loadTodosFromServer() {
-  return function(dispatch: Dispatch) {
-    return TodosApi.GetTodos().then(ts => {
-      dispatch(todosLoadedSuccessfully(ts));
-    });
+  return async function(dispatch: Dispatch) {
+    const ts = await TodosApi.GetTodos();
+    dispatch(todosLoadedSuccessfully(ts));
   };
 }
