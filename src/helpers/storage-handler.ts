@@ -16,3 +16,11 @@ export const saveState = throttle((state: any) => {
     localStorage.setItem("state", JSON.stringify(state));
   } catch (e) {}
 }, 1000);
+
+export const getJwt = () => {
+  try {
+    return localStorage.getItem("jwt");
+  } catch (e) {
+    return "";
+  }
+};
