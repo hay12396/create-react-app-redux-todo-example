@@ -22,11 +22,11 @@ class Nested extends React.Component<RouteComponentProps<{}>, {}> {
 
         <Switch>
           <Route exact path={`/nested`} component={WithoutId} />
-          <Route path={`/nested/:id`} component={WithId} />
-          {/* <Route
+          <Route exact path={`/nested/:id`} component={WithId} />
+          <Route
               path={"/nested/*"}
               render={() => <div>No routes found..</div>}
-            /> */}
+            />
         </Switch>
       </div>
     );
