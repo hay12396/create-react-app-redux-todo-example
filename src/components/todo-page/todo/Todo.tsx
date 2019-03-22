@@ -6,12 +6,11 @@ export interface ITodoProps {
   onTodoClicked: (t: TodoItem) => any;
 }
 
-class Todo extends React.PureComponent<ITodoProps, {}> {
+class Todo extends React.Component<ITodoProps, {}> {
   render() {
     return (
       <li
-        key={this.props.todo.id}
-        onClick={()=> this.props.onTodoClicked(this.props.todo)}
+        onClick={() => this.props.onTodoClicked(this.props.todo)}
         style={{
           textDecoration: this.props.todo.completed ? "line-through" : "none"
         }}
@@ -20,6 +19,7 @@ class Todo extends React.PureComponent<ITodoProps, {}> {
       </li>
     );
   }
+
 }
 
 export default Todo;

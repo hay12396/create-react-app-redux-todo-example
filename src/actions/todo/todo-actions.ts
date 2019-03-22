@@ -1,8 +1,8 @@
 import * as types from "./action-types";
-import { TodoItem } from "../../components/todo/class/todo";
 import { Action } from "../action";
 import { Dispatch } from "redux";
 import TodosApi from "../../api/todos/todos-api";
+import { TodoItem } from "../../components/todo-page/todo/class/todo";
 
 export function addTodo(todo: TodoItem): Action {
   return { type: types.ADD_TODO, payload: todo };

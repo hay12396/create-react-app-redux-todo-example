@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import todoReducer from "./todo.reducer";
-import { TodoItem } from "../components/todo/class/todo";
 import todosFilterReducer from "./todos-filter.reducer";
+import { TodoItem } from "../components/todo-page/todo/class/todo";
 
 export interface IRootStoreState {
   todos: TodoItem[];

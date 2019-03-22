@@ -8,16 +8,14 @@ export interface ITodoListProps {
 }
 
 export default class TodoList extends React.Component<ITodoListProps, {}> {
-  
   render() {
     let me = this;
     return (
       <ul>
         {this.props.todos.map(t => {
-          return <Todo
-            todo={t}
-            onTodoClicked={me.props.onTodoClicked}
-          />;
+          return (
+            <Todo key={t.id} todo={t} onTodoClicked={me.props.onTodoClicked} />
+          );
         })}
       </ul>
     );

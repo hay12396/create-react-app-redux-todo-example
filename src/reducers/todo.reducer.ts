@@ -1,6 +1,6 @@
-import { TodoItem } from "../components/todo/class/todo";
 import * as types from "../actions/todo/action-types";
 import { Action } from "../actions/action";
+import { TodoItem } from "../components/todo-page/todo/class/todo";
 
 export default function todoReducer(state: TodoItem[] = [], action: Action) {
   switch (action.type) {

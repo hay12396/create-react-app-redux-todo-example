@@ -1,5 +1,5 @@
-import { TodoItem } from "../../components/todo/class/todo";
 import { v4 } from "node-uuid";
+import { TodoItem } from "../../components/todo-page/todo/class/todo";
 
 export default class TodosApi {
   static GetTodos(): Promise<TodoItem[]> {

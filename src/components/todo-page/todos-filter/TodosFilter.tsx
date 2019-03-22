@@ -4,7 +4,7 @@ import {
   SHOW_ALL,
   SHOW_COMPLETED,
   SHOW_UNCOMPELTED
-} from "../../actions/filter/action-types";
+} from "../../../actions/filter/action-types";
 
 export interface ITodosFilterProps {
   currentFilter: string;
