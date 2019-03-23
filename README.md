@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## VSCode extensions to install
+
+1. CSS Peek
+2. Debugger for Chrome (IOS?)
+3. Intellisense for css class names
+4. Prettier
+5. ReactJs code snippets
+6. Sublime Babel
+7. Types auto installer.
+8. Visual studio IntelliCode
+
 ## Available Scripts
 
 In the project directory, you can run:
