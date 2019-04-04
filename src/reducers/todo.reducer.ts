@@ -14,10 +14,10 @@ export default function todoReducer(state: TodoItem[] = [], action: Action) {
       return state.map(t => {
         if (t.id === action.payload.id) {
           t.completed = !t.completed;
-          return t;
+          return {...t};
         }
 
-        return t;
+        return {...t};
       });
 
     case types.TODOS_LOADED_FROM_SERVER:

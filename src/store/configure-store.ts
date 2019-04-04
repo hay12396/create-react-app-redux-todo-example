@@ -1,4 +1,4 @@
-import { loadState, saveState } from "../class/storage-handler";
+import { loadState, saveState } from "../helpers/storage-handler";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import rootReducer from "../reducers/root.reducer";

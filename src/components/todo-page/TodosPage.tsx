@@ -21,7 +21,7 @@ export interface ITodosPageProps {
   filterActions?: typeof FilterActions;
 }
 
-class TodosPage extends React.PureComponent<ITodosPageProps, {}> {
+class TodosPage extends React.Component<ITodosPageProps, {}> {
   constructor(props: ITodosPageProps) {
     super(props);
 

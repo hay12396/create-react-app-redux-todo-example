@@ -7,7 +7,7 @@ export interface ITodoListProps {
   onTodoClicked: (t: TodoItem) => any;
 }
 
-export default class TodoList extends React.Component<ITodoListProps, {}> {
+export default class TodoList extends React.PureComponent<ITodoListProps, {}> {
   render() {
     let me = this;
     return (
