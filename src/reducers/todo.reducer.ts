@@ -8,10 +8,15 @@ export default function todoReducer(state: TodoItem[] = [], action: Action) {
       return [...state, { ...action.payload }];
 
     case types.REMOVE_TODO:
-      return [...state.filter(t => t.id != action.payload.id)];
+    {
+      const newState = [...state];
+      return newState.filter(t => t.id != action.payload.id);
+    }
 
     case types.TOGGLE_TODO:
-      return state.map(t => {
+    {
+      const newState = [...state];
+      return newState.map(t => {
         if (t.id === action.payload.id) {
           t.completed = !t.completed;
           return {...t};
@@ -19,6 +24,7 @@ export default function todoReducer(state: TodoItem[] = [], action: Action) {
 
         return {...t};
       });
+    }
 
     case types.TODOS_LOADED_FROM_SERVER:
       return action.payload;
